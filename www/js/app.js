@@ -32,7 +32,23 @@ var app = angular.module('cudadosoApp', ['ionic'])
         })
         .state('onboarding', {
             url: '/onboarding',
-            templateUrl: 'templates/onboarding.html'
+            templateUrl: 'templates/onboarding.html',
+            controller: 'OnboardingCtrl'
+        })
+        .state('gps', {
+            url: '/gps',
+            templateUrl: 'templates/gps.html',
+            controller: 'GpsCtrl'
+        })
+        .state('notification', {
+            url: '/notification',
+            templateUrl: 'templates/notification.html',
+            controller: 'NotificationCtrl'
+        })
+        .state('signup', {
+            url: '/signup',
+            templateUrl: 'templates/signup.html',
+            controller: 'SignupCtrl'
         })
         // Each tab has its own nav history stack:
 

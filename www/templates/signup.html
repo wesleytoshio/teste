@@ -1,0 +1,112 @@
+<ion-view class="singup">
+    <ion-nav-bar>
+        <ion-nav-title>
+            CUIDADOSO
+        </ion-nav-title>
+        <ion-nav-buttons side="right">
+            <button ng-click="doSomething()" class="icons icon-question btn-icon">
+            </button>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-content padding>
+        <header class="step">
+            <span class="amount-step">1/3</span>
+            <strong>CADASTRO DO IDOSO</strong>
+        </header>
+        <ion-slide-box on-slide-changed="slideChanged(index)" class="slide-signup">
+            <ion-slide class="slide-one">
+                <div class="list">
+                    <label class=" item-input item-floating-label">
+              <span class="input-label">Nome</span>
+              <input type="text" placeholder="Nome"/>
+            </label>
+                    <label class=" item-input item-floating-label">
+              <span class="input-label">E-mail</span>
+              <input type="text"  placeholder="E-mail"/>
+            </label>
+                    <div class="row inline-inputs">
+                        <div class="col">
+                            <label class=" item-input item-floating-label">
+                  <span class="input-label">Senha</span>
+                  <input type="password"  placeholder="Senha"/>
+                </label>
+                        </div>
+                        <div class="col">
+                            <label class=" item-input item-floating-label">
+                  <span class="input-label">Confirma</span>
+                  <input type="password"  placeholder="Confirma"/>
+                </label>
+                        </div>
+                    </div>
+                    <label class=" item-input item-floating-label">
+              <span class="input-label">CPF</span>
+              <input type="text"  placeholder="CPF"/>
+            </label>
+                    <div class="row inline-inputs">
+                        <div class="col">
+                            <label class=" item-input item-floating-label">
+                  <span class="input-label">Celular</span>
+                  <input type="password" placeholder="Celular"/>
+                </label>
+                        </div>
+                        <div class="col">
+                            <label class=" item-input item-floating-label">
+                  <span class="input-label">Telefone Fixo</span>
+                  <input type="password" placeholder="Telefone Fixo"/>
+                </label>
+                        </div>
+                    </div>
+                </div>
+            </ion-slide>
+
+            <ion-slide class="slide-one">
+                <div class="list">
+                    <label class=" item-input item-floating-label">
+              <span class="input-label">Nome</span>
+              <input type="text" placeholder="Nome"/>
+            </label>
+                    <label class=" item-input item-floating-label">
+              <span class="input-label">E-mail</span>
+              <input type="text"  placeholder="E-mail"/>
+            </label>
+                    <div class="row inline-inputs">
+                        <div class="col">
+                            <label class=" item-input item-floating-label">
+                  <span class="input-label">Senha</span>
+                  <input type="password"  placeholder="Senha"/>
+                </label>
+                        </div>
+                        <div class="col">
+                            <label class=" item-input item-floating-label">
+                  <span class="input-label">Confirma</span>
+                  <input type="password"  placeholder="Confirma"/>
+                </label>
+                        </div>
+                    </div>
+                    <label class=" item-input item-floating-label">
+              <span class="input-label">CPF</span>
+              <input type="text"  placeholder="CPF"/>
+            </label>
+                    <div class="row inline-inputs">
+                        <div class="col">
+                            <label class=" item-input item-floating-label">
+                  <span class="input-label">Celular</span>
+                  <input type="password" placeholder="Celular"/>
+                </label>
+                        </div>
+                        <div class="col">
+                            <label class=" item-input item-floating-label">
+                  <span class="input-label">Telefone Fixo</span>
+                  <input type="password" placeholder="Telefone Fixo"/>
+                </label>
+                        </div>
+                    </div>
+                </div>
+            </ion-slide>
+        </ion-slide-box>
+    </ion-content>
+    <ion-footer-bar class="hide-on-keyboard-open">
+        <button type="button" class="signin">Já sou cadastrado</button>
+        <button type="button" class="next-step" ng-click="signup.next()">Próximo passo</button>
+    </ion-footer-bar>
+</ion-view>

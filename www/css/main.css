@@ -1,7 +1,113 @@
 * {
-  font-family: "Titillium Web" !important;
-}
+  font-family: "Titillium Web" !important; }
 
 body {
-  font-weight: 400;
-}
+  font-weight: 400; }
+
+/* ONBOARDING
+-------------------------------------------------- */
+.slider {
+  height: 100vh; }
+  .slider .slide-title {
+    color: #fff;
+    text-align: center;
+    font-size: 1.8em;
+    padding: 20px;
+    margin-top: 10vh; }
+  .slider .slide-one {
+    background-color: #f63371; }
+  .slider .slide-two {
+    background-color: #43b3a1; }
+  .slider .slide-three {
+    background-color: #592b5f; }
+  .slider .slider-pager {
+    top: 3% !important; }
+  .slider .slide-img {
+    width: 80%;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 20vh;
+    display: block;
+    left: 0;
+    right: 0; }
+  .slider .slider-pager-page {
+    background-color: transparent; }
+    .slider .slider-pager-page i:before {
+      content: "" !important;
+      width: 10px;
+      height: 10px;
+      display: block;
+      border-radius: 50%;
+      background-color: transparent;
+      border: solid 1px #fff !important;
+      transition: 0.3s;
+      transform: scale(1); }
+    .slider .slider-pager-page.active i:before {
+      background-color: #fff;
+      transform: scale(1.3);
+      border: none !important; }
+
+.btn-start {
+  position: fixed;
+  bottom: 0;
+  left: 0 !important;
+  transform: translate(0, 0px) translateZ(0px) !important;
+  height: 54px;
+  border: none;
+  font-size: 1.3em;
+  width: 100% !important;
+  background-color: #fff;
+  color: #666;
+  z-index: 99;
+  font-weight: bold; }
+
+/*ALLOW
+-------------------------------------------------- */
+.allow-gps ion-content {
+  background-color: #f63371;
+  height: 100vh; }
+  .allow-gps ion-content h1 {
+    text-align: center;
+    color: #fff;
+    font-size: 1.5em;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    display: block; }
+  .allow-gps ion-content img {
+    width: 80%;
+    margin: 0 auto;
+    display: block; }
+  .allow-gps ion-content p {
+    text-align: center;
+    color: #fff;
+    font-size: 1.1em;
+    line-height: 1;
+    padding: 5px 10px;
+    margin-top: 10px; }
+  .allow-gps ion-content .btn-allow {
+    background-color: #fff;
+    height: 44px;
+    margin: 0 auto;
+    padding: 0 40px;
+    font-weight: bold;
+    display: block;
+    color: #f63371;
+    border: none; }
+  .allow-gps ion-content .btn-not-allow {
+    background-color: transparent;
+    height: 44px;
+    margin: 10px auto 0 auto;
+    padding: 0 40px;
+    font-weight: 300;
+    display: block;
+    color: #fff;
+    border: none; }
+  .allow-gps ion-content.notification {
+    background-color: #592b5f; }
+    .allow-gps ion-content.notification .btn-allow {
+      color: #592b5f; }
+
+/*ALLOW
+-------------------------------------------------- */
+.singup .bar-header {
+  background-color: #43b3a1; }

@@ -1,4 +1,18 @@
-<ion-view>
-    <ion-content>
-    </ion-content>
+<ion-view view-title="Onboarding">
+    <ion-slide-box on-slide-changed="slideChanged(index)" class="slide-box">
+        <ion-slide class="slide-one">
+            <h1 class="slide-title">Encontre cuidadores <br> perto de você</h1>
+            <img src="img/slide-one.svg" class="slide-img" />
+        </ion-slide>
+        <ion-slide class="slide-two">
+            <h1 class="slide-title">Veja o perfil e escolha <br> o melhor candidato</h1>
+            <img src="img/slide-two.svg" class="slide-img" />
+        </ion-slide>
+        <ion-slide class="slide-three">
+            <h1 class="slide-title">Encontre empregos perto <br> da sua região</h1>
+            <img src="img/slide-three.svg" class="slide-img" />
+        </ion-slide>
+
+    </ion-slide-box>
+    <button type="button" class="btn-start" ng-click="goPage()">Começar agora</button>
 </ion-view>

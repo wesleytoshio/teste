@@ -10,15 +10,15 @@ var paths = {
 gulp.task('default', ['sass']);
 
 gulp.task('sass', function(done) {
-    gulp.src('./scss/ionic.app.scss')
+    gulp.src('www/scss/main.scss')
         .pipe(sass())
         .on('error', sass.logError)
-        .pipe(gulp.dest('./www/css/'))
+        .pipe(gulp.dest('www/css/'))
         .pipe(cleanCss({
             keepSpecialComments: 0
         }))
         .pipe(rename({ extname: '.min.css' }))
-        .pipe(gulp.dest('./www/css/'))
+        .pipe(gulp.dest('www/css/'))
         .on('end', done);
 });
 
