@@ -25,8 +25,8 @@ var app = angular.module('cudadosoApp', ['ionic'])
     $stateProvider
 
     // setup an abstract state for the tabs directive
-        .state('tab', {
-            url: '/tab',
+        .state('app', {
+            url: '/app',
             abstract: true,
             templateUrl: 'templates/tabs.html'
         })
@@ -43,53 +43,30 @@ var app = angular.module('cudadosoApp', ['ionic'])
         .state('notification', {
             url: '/notification',
             templateUrl: 'templates/notification.html',
-            controller: 'NotificationCtrl'
+            controller: 'NotificationCtrl',
+            cache: false
         })
         .state('signup', {
             url: '/signup',
             templateUrl: 'templates/signup.html',
-            controller: 'SignupCtrl'
+            controller: 'SignupCtrl',
+            cache: false
+        })
+        .state('login', {
+            url: '/login',
+            templateUrl: 'templates/login.html',
+            controller: 'LoginCtrl',
+            cache: false
         })
         // Each tab has its own nav history stack:
 
-    .state('tab.dash', {
-        url: '/dash',
-        views: {
-            'tab-dash': {
-                templateUrl: 'templates/tab-dash.html',
-                controller: 'DashCtrl'
-            }
-        }
+    .state('home', {
+        url: '/home',
+        templateUrl: 'templates/home.html',
+        controller: 'HomeCtrl',
+        cache: false
     })
 
-    .state('tab.chats', {
-            url: '/chats',
-            views: {
-                'tab-chats': {
-                    templateUrl: 'templates/tab-chats.html',
-                    controller: 'ChatsCtrl'
-                }
-            }
-        })
-        .state('tab.chat-detail', {
-            url: '/chats/:chatId',
-            views: {
-                'tab-chats': {
-                    templateUrl: 'templates/chat-detail.html',
-                    controller: 'ChatDetailCtrl'
-                }
-            }
-        })
-
-    .state('tab.account', {
-        url: '/account',
-        views: {
-            'tab-account': {
-                templateUrl: 'templates/tab-account.html',
-                controller: 'AccountCtrl'
-            }
-        }
-    });
 
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/onboarding');

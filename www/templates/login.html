@@ -1,0 +1,26 @@
+<ion-view class="login" view-title="CUIDADOSO">
+    <ion-nav-bar>
+        <ion-nav-buttons side="right">
+            <button ng-click="doSomething()" class="icons icon-question btn-icon">
+         </button>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-content padding>
+        <h2 class="login-header"><i class="icons icon-login"></i><strong>LOGIN</strong></h2>
+        <div class="list">
+            <label class=" item-input item-floating-label">
+         <span class="input-label">E-mail</span>
+         <input type="text"  placeholder="E-mail"/>
+         </label>
+            <label class=" item-input item-floating-label">
+             <span class="input-label">Senha</span>
+         <input type="password"  placeholder="Senha"/>
+         </label>
+        </div>
+        </div>
+    </ion-content>
+    <ion-footer-bar class="hide-on-keyboard-open">
+        <button type="button" class="signin" ng-click="goSignup()">Não sou cadastrado</button>
+        <button type="button" class="next-step" ng-click="goPage()">Entrar</button>
+    </ion-footer-bar>
+</ion-view>

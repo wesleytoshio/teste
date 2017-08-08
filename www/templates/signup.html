@@ -1,104 +1,137 @@
-<ion-view class="singup">
+<ion-view class="singup" view-title="CUIDADOSO">
     <ion-nav-bar>
-        <ion-nav-title>
-            CUIDADOSO
-        </ion-nav-title>
         <ion-nav-buttons side="right">
             <button ng-click="doSomething()" class="icons icon-question btn-icon">
-            </button>
+         </button>
         </ion-nav-buttons>
     </ion-nav-bar>
     <ion-content padding>
-        <header class="step">
-            <span class="amount-step">1/3</span>
-            <strong>CADASTRO DO IDOSO</strong>
-        </header>
-        <ion-slide-box on-slide-changed="slideChanged(index)" class="slide-signup">
+        <ion-slide-box on-slide-changed="slideChanged(index)" ng-init="signup.lock()" active-slide="signup.current" class="slide-signup">
             <ion-slide class="slide-one">
+                <header class="step">
+                    <span class="amount-step">1/3</span>
+                    <strong>CADASTRO DO RESPONSÁVEL</strong>
+                </header>
                 <div class="list">
                     <label class=" item-input item-floating-label">
-              <span class="input-label">Nome</span>
-              <input type="text" placeholder="Nome"/>
-            </label>
+               <span class="input-label">Nome</span>
+               <input type="text" placeholder="Nome"/>
+               </label>
                     <label class=" item-input item-floating-label">
-              <span class="input-label">E-mail</span>
-              <input type="text"  placeholder="E-mail"/>
-            </label>
+               <span class="input-label">E-mail</span>
+               <input type="text"  placeholder="E-mail"/>
+               </label>
                     <div class="row inline-inputs">
                         <div class="col">
                             <label class=" item-input item-floating-label">
-                  <span class="input-label">Senha</span>
-                  <input type="password"  placeholder="Senha"/>
-                </label>
+                     <span class="input-label">Senha</span>
+                     <input type="password"  placeholder="Senha"/>
+                     </label>
                         </div>
                         <div class="col">
                             <label class=" item-input item-floating-label">
-                  <span class="input-label">Confirma</span>
-                  <input type="password"  placeholder="Confirma"/>
-                </label>
+                     <span class="input-label">Confirma</span>
+                     <input type="password"  placeholder="Confirma"/>
+                     </label>
                         </div>
                     </div>
                     <label class=" item-input item-floating-label">
-              <span class="input-label">CPF</span>
-              <input type="text"  placeholder="CPF"/>
-            </label>
+               <span class="input-label">CPF</span>
+               <input type="text"  placeholder="CPF"/>
+               </label>
                     <div class="row inline-inputs">
                         <div class="col">
                             <label class=" item-input item-floating-label">
-                  <span class="input-label">Celular</span>
-                  <input type="password" placeholder="Celular"/>
-                </label>
+                     <span class="input-label">Celular</span>
+                     <input type="password" placeholder="Celular"/>
+                     </label>
                         </div>
                         <div class="col">
                             <label class=" item-input item-floating-label">
-                  <span class="input-label">Telefone Fixo</span>
-                  <input type="password" placeholder="Telefone Fixo"/>
-                </label>
+                     <span class="input-label">Telefone Fixo</span>
+                     <input type="password" placeholder="Telefone Fixo"/>
+                     </label>
                         </div>
                     </div>
                 </div>
             </ion-slide>
-
             <ion-slide class="slide-one">
+                <header class="step">
+                    <span class="amount-step">2/3</span>
+                    <strong>CADASTRO DO IDOSO</strong>
+                </header>
                 <div class="list">
                     <label class=" item-input item-floating-label">
-              <span class="input-label">Nome</span>
-              <input type="text" placeholder="Nome"/>
-            </label>
+                    <span class="input-label">Nome</span>
+                    <input type="text" placeholder="Nome"/>
+                    </label>
                     <label class=" item-input item-floating-label">
-              <span class="input-label">E-mail</span>
-              <input type="text"  placeholder="E-mail"/>
-            </label>
+                    <span class="input-label">Gênero</span>
+                    <input type="text"  placeholder="Gênero"/>
+                    </label>
+                    <label class=" item-input item-floating-label">
+                    <span class="input-label">Cuidados especiais</span>
+                    <input type="text" placeholder="Cuidados especiais"/>
+                    </label>
+                    <label class=" item-input item-floating-label">
+                    <span class="input-label">Medicamentos</span>
+                    <input type="password" placeholder="Medicamentos"/>
+                    </label>
+                    <label class=" item-input item-floating-label">
+                    <span class="input-label">Descrição / perfil / Observações</span>
+                    <input type="text" placeholder="Descrição / perfil / Observações"/>
+                    </label>
+                </div>
+                <button type="button" class="add-old-aged">Adicionar outro idoso</button>
+            </ion-slide>
+            <ion-slide class="slide-one">
+                <header class="step">
+                    <span class="amount-step">3/3</span>
+                    <strong>CADASTRO DO ENDEREÇO</strong>
+                </header>
+                <div class="list">
+                    <label class=" item-input item-floating-label">
+                    <span class="input-label">Identificação</span>
+                    <input type="text" placeholder="Identificação"/>
+                    </label>
+                    <label class=" item-input item-floating-label">
+                    <span class="input-label">CEP</span>
+                    <input type="text"  placeholder="CEP"/>
+                    </label>
+                    <label class=" item-input item-floating-label">
+                    <span class="input-label">Endereço</span>
+                    <input type="text" placeholder="Endereço"/>
+                    </label>
+                    <label class=" item-input item-floating-label">
+                    <span class="input-label">Bairro</span>
+                    <input type="password" placeholder="Medicamentos"/>
+                    </label>
                     <div class="row inline-inputs">
                         <div class="col">
                             <label class=" item-input item-floating-label">
-                  <span class="input-label">Senha</span>
-                  <input type="password"  placeholder="Senha"/>
-                </label>
+                     <span class="input-label">Número</span>
+                     <input type="password" placeholder="Número"/>
+                     </label>
                         </div>
                         <div class="col">
                             <label class=" item-input item-floating-label">
-                  <span class="input-label">Confirma</span>
-                  <input type="password"  placeholder="Confirma"/>
-                </label>
+                     <span class="input-label">Complemento</span>
+                     <input type="password" placeholder="Complemento"/>
+                     </label>
                         </div>
                     </div>
-                    <label class=" item-input item-floating-label">
-              <span class="input-label">CPF</span>
-              <input type="text"  placeholder="CPF"/>
-            </label>
                     <div class="row inline-inputs">
                         <div class="col">
                             <label class=" item-input item-floating-label">
-                  <span class="input-label">Celular</span>
-                  <input type="password" placeholder="Celular"/>
-                </label>
+                     <span class="input-label">Estado</span>
+                     <input type="password" placeholder="Estado"/>
+                     </label>
                         </div>
                         <div class="col">
                             <label class=" item-input item-floating-label">
-                  <span class="input-label">Telefone Fixo</span>
-                  <input type="password" placeholder="Telefone Fixo"/>
-                </label>
+                     <span class="input-label">Cidade</span>
+                     <input type="password" placeholder="Cidade"/>
+                     </label>
                         </div>
                     </div>
                 </div>
@@ -106,7 +139,7 @@
         </ion-slide-box>
     </ion-content>
     <ion-footer-bar class="hide-on-keyboard-open">
-        <button type="button" class="signin">Já sou cadastrado</button>
-        <button type="button" class="next-step" ng-click="signup.next()">Próximo passo</button>
+        <button type="button" class="signin" ng-click="signup.current == 0 ? goPage() : signup.back()">{{signup.current == 0 ? 'Já sou cadastrado' : 'Voltar'}}</button>
+        <button type="button" class="next-step" ng-click="signup.current == 2 ? signup.store() : signup.next()"> {{signup.current == 2 ? 'Salvar' : 'Próximo passo'}}</button>
     </ion-footer-bar>
 </ion-view>
