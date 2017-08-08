@@ -353,12 +353,28 @@ body {
     .no-border {
         border: none $im;
     }
+    .alert-info{
+      min-height:64px;
+      border-radius:6px;
+      background-color:#592b5f;
+      margin-bottom:5px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+      text-align:center;
+      color:#fff;
+      font-size:1.27em;
+      padding-top:10px;
+      span{
+        display:block;
+      }
+    }
 }
 
 .has-footer {
     bottom: 108px $im;
 }
-
+.has-nav{
+  bottom:64px $im;
+}
 
 /*CALENDAR CLASS
 -------------------------------------------------- */

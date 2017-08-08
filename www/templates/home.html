@@ -14,9 +14,15 @@
         </ion-tab>
     </ion-tabs-->
     <ion-content padding class="has-nav">
-        <p class="p-text">Interessadas se candidataram. Você em breve escolherá a que melhor se adequa ao seu perfil.</p>
-        <p class="p-text">Clique no ícone <i class="icons icon-days"></i> para acompanhar o status desta solicitação</p>
-        <div tiny-calendar first-day="1" events="events"></div>
+        <h2 class="login-header">
+            <i class="icons icon-days"></i>
+            <strong>AGENDAMENTOS</strong>
+        </h2>
+          <div class="alert-info" ng-click="openModal()">
+            Atenção!
+            <span>Proposta aprovada com sucesso</span>
+          </div>
+        <div tiny-calendar first-day="1" events="events" week-days='DSTQQSS'></div>
     </ion-content>
     <ion-footer-bar class="hide-on-keyboard-open menu-footer">
         <button type="button" class="btn-icon icons icon-days"></button>
@@ -26,4 +32,14 @@
           <span>Solicitar</span>
         </button>
     </ion-footer-bar>
+      <script id="my-modal.html" type="text/ng-template">
+        <ion-modal-view>
+          <ion-header-bar>
+            <h1 class="title">My Modal title</h1>
+          </ion-header-bar>
+          <ion-content>
+            Hello!
+          </ion-content>
+        </ion-modal-view>
+      </script>
 </ion-view>
