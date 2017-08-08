@@ -360,6 +360,25 @@ body {
 }
 
 
+/*CALENDAR CLASS
+-------------------------------------------------- */
+
+.tc-container {
+    max-width: none $im;
+}
+
+.tc-day {
+    background-color: #dfdbd4;
+    color: #5a4f52;
+    height: 2.5em $im;
+    line-height: 2.5em $im;
+}
+
+.differentMonth {
+    background-color: #f4f2f0;
+}
+
+
 /*FOOTER MENU
 -------------------------------------------------- */
 

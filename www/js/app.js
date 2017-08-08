@@ -1,4 +1,4 @@
-var app = angular.module('cudadosoApp', ['ionic'])
+var app = angular.module('cudadosoApp', ['ionic', 'angular-tiny-calendar'])
 
 .run(function($ionicPlatform) {
     $ionicPlatform.ready(function() {

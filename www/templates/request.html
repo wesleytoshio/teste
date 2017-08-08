@@ -1,9 +1,6 @@
 <ion-view class="home" view-title="CUIDADOSO">
     <ion-nav-bar>
-        <ion-nav-buttons side="left">
-            <button ng-click="doSomething()" class="icons icon-menu btn-icon">
-         </button>
-        </ion-nav-buttons>
+
         <ion-nav-buttons side="right">
             <button ng-click="doSomething()" class="icons icon-question btn-icon">
          </button>
@@ -11,10 +8,12 @@
     </ion-nav-bar>
     <ion-content padding class="has-footer">
         <h2 class="login-header">
-            <i class="icons icon-days"></i>
-            <strong>SOLICITAR SERVIÇO</strong>
+            <i class="icons icon-days" ng-if="!request"></i>
+            <strong ng-if="!request">SOLICITAR SERVIÇO</strong>
+            <i class="icons icon-days" ng-if="request"></i>
+            <strong ng-if="request">SOLICITAÇÃO ENVIADA</strong>
         </h2>
-        <div class="list">
+        <div class="list" ng-if="!request">
             <label class=" item-input item-stacked-label">
           <span class="input-label">Motivo</span>
           <input type="text"  />
@@ -60,12 +59,16 @@
           <input type="text"  />
         </label>
         </div>
+        <div ng-if="request">
+            <p class="p-text">Sua solicitação foi enviada com sucesso. Agora é só aguardar as babysitters interessadas se candidatarem. Você em breve escolherá a que melhor se adequa ao seu perfil.</p>
+            <p class="p-text">Clique no ícone <i class="icons icon-days"></i> para acompanhar o status desta solicitação</p>
+        </div>
         </div>
     </ion-content>
     <ion-footer-bar class="hide-on-keyboard-open menu-footer">
         <button type="button" class="btn-icon icons icon-days"></button>
         <button type="button" class="btn-icon icons icon-user right"></button>
-        <button type="button" class="btn-circle">
+        <button type="button" class="btn-circle" ng-click="request ? goPage() : sendRequest()">
           <i class="icons icon-old"></i>
           <span>Solicitar</span>
         </button>
