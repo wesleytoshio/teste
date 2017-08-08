@@ -1,13 +1,7 @@
-app.controller('HomeCtrl', function($scope, $rootScope, $state, $ionicTabsDelegate) {
-    $scope.init = function() {
-        $ionicTabsDelegate.select(2);
-    }
+app.controller('HomeCtrl', function($scope, $rootScope, $state) {
+
     $rootScope.navBarCurrent = 'pinkColor';
-    $scope.goSignup = function() {
-        $state.go('signup');
+    $scope.goRequest = function() {
+        $state.go('request');
     }
-    $scope.goPage = function() {
-        $state.go('app.home');
-    }
-    $scope.init();
 })

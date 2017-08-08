@@ -58,6 +58,12 @@ var app = angular.module('cudadosoApp', ['ionic'])
             controller: 'LoginCtrl',
             cache: false
         })
+        .state('request', {
+            url: '/request',
+            templateUrl: 'templates/request.html',
+            controller: 'RequestCtrl',
+            cache: false
+        })
         // Each tab has its own nav history stack:
 
     .state('home', {

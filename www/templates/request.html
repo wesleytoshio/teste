@@ -1,0 +1,73 @@
+<ion-view class="home" view-title="CUIDADOSO">
+    <ion-nav-bar>
+        <ion-nav-buttons side="left">
+            <button ng-click="doSomething()" class="icons icon-menu btn-icon">
+         </button>
+        </ion-nav-buttons>
+        <ion-nav-buttons side="right">
+            <button ng-click="doSomething()" class="icons icon-question btn-icon">
+         </button>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-content padding class="has-footer">
+        <h2 class="login-header">
+            <i class="icons icon-days"></i>
+            <strong>SOLICITAR SERVIÇO</strong>
+        </h2>
+        <div class="list">
+            <label class=" item-input item-stacked-label">
+          <span class="input-label">Motivo</span>
+          <input type="text"  />
+        </label>
+            <div class="row inline-inputs">
+                <div class="col">
+                    <label class=" item-input item-stacked-label">
+                     <span class="input-label">Data de início</span>
+                     <input type="date"  />
+                     </label>
+                </div>
+                <div class="col">
+                    <label class=" item-input item-stacked-label">
+                     <span class="input-label">Hora de início</span>
+                     <input type="time"  />
+                     </label>
+                </div>
+            </div>
+            <div class="row inline-inputs">
+                <div class="col">
+                    <label class=" item-input item-stacked-label">
+                     <span class="input-label">Quant. de horas</span>
+                     <input type="number"  />
+                     </label>
+                </div>
+                <div class="col">
+                    <label class=" item-input item-stacked-label">
+                     <span class="input-label">Local</span>
+                     <input type="text"  />
+                     </label>
+                </div>
+            </div>
+            <label class=" item-input item-stacked-label no-border">
+            <span class="input-label label-old">Idoso</span>
+          <ion-list>
+            <ion-checkbox ng-model="filter.red">Joao</ion-checkbox>
+            <ion-checkbox ng-model="filter.yellow">Maria</ion-checkbox>
+            <ion-checkbox ng-model="filter.pink">Antônio</ion-checkbox>
+          </ion-list>
+        </label>
+            <label class=" item-input item-stacked-label marg-top">
+          <span class="input-label">Observações</span>
+          <input type="text"  />
+        </label>
+        </div>
+        </div>
+    </ion-content>
+    <ion-footer-bar class="hide-on-keyboard-open menu-footer">
+        <button type="button" class="btn-icon icons icon-days"></button>
+        <button type="button" class="btn-icon icons icon-user right"></button>
+        <button type="button" class="btn-circle">
+          <i class="icons icon-old"></i>
+          <span>Solicitar</span>
+        </button>
+    </ion-footer-bar>
+</ion-view>
