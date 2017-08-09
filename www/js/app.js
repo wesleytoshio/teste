@@ -25,11 +25,7 @@ var app = angular.module('cudadosoApp', ['ionic', 'angular-tiny-calendar'])
     $stateProvider
 
     // setup an abstract state for the tabs directive
-        .state('app', {
-            url: '/app',
-            abstract: true,
-            templateUrl: 'templates/tabs.html'
-        })
+
         .state('onboarding', {
             url: '/onboarding',
             templateUrl: 'templates/onboarding.html',
@@ -87,15 +83,21 @@ var app = angular.module('cudadosoApp', ['ionic', 'angular-tiny-calendar'])
             templateUrl: 'templates/caregiver-comments.html',
             controller: 'CaregiverCommentsCtrl',
             cache: false
-        })        
+        })
+        .state('list', {
+            url: '/list',
+            templateUrl: 'templates/list.html',
+            controller: 'ListCtrl',
+            cache: false
+        })       
         // Each tab has its own nav history stack:
 
-    .state('home', {
-        url: '/home',
-        templateUrl: 'templates/home.html',
-        controller: 'HomeCtrl',
-        cache: false
-    })
+        .state('home', {
+            url: '/home',
+            templateUrl: 'templates/home.html',
+            controller: 'HomeCtrl',
+            cache: false
+        })
 
 
     // if none of the above states are matched, use this as the fallback

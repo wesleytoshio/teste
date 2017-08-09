@@ -54,9 +54,9 @@
    <ion-footer-bar class="hide-on-keyboard-open menu-footer">
       <button type="button" class="btn-icon icons icon-days" ng-click="goPage()" ></button>
       <button type="button" class="btn-icon icons icon-user right" ng-click="goSignup()"></button>
-      <button type="button" class="btn-circle" ng-click="goRequest()" ng-class="{'caregiver-button': isType == 1}">
-      <i class="icons" ng-class="isType == 1 ? 'icon-checked' : 'icon-old'"></i>
-      <span>{{isType == 1 ? 'Pertos de você' : 'Solicitar'}}</span>
-      </button>
+        <button type="button" class="btn-circle" ng-click="isType == 1 ? goList() : goRequest() " ng-class="{'caregiver-button': isType == 1}">
+          <i class="icons" ng-class="isType == 1 ? 'icon-checked' : 'icon-old'"></i>
+          <span>{{isType == 1 ? 'Pedidos pertos de você' : 'Solicitar'}}</span>
+        </button>
    </ion-footer-bar>
 </ion-view>

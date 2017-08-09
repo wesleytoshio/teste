@@ -376,7 +376,57 @@ body {
 .has-nav {
     bottom: 64px $im;
 }
-
+}
+/*LIST
+-------------------------------------------------- */
+.list-caregiver{
+.header-title {
+        color: #592b5f;
+        padding: 10px 5px;
+        font-size: 1.5em;
+        font-weight:300 $im;
+        i {
+            padding-right: 10px;
+        }
+    }
+    .btn-nearest{
+            border:solid 1px #ddd;
+            width:100%;
+            height:80px;
+            border-radius:4px;
+            background: #eee; 
+            background: -webkit-linear-gradient(top, #eee, #fff);
+            background: -moz-linear-gradient(top, #eee, #fff);
+            background: -o-linear-gradient(top, #eee, #fff);
+            background: linear-gradient(top, #eee, #fff);
+            font-size:1.3em;
+            font-weight:bold;
+            color:#592b5f;
+        }
+    .btn-groups{
+        padding:0 $im;
+        .col{
+            padding:1px $im;
+        }
+    }
+    .filter{
+        padding:20px 0px;
+        font-size:1.2em;
+    }
+    .list{
+        .item{
+            border:none;
+            margin:0;
+            border-bottom: solid 1px #eee;
+            &:first-child{
+              border-top: solid 1px #eee;  
+            }
+            &:last-child{
+              border-bottom:none;  
+            }
+        }
+    }
+}
 
 /*CALENDAR CLASS
 -------------------------------------------------- */
@@ -419,7 +469,7 @@ body {
       }
 
     }
-}
+
 .listCaregiver {
       ion-item{
         padding-left:10px $im;
@@ -500,6 +550,9 @@ body {
             color: #fff;
             font-size: 2.5em;
             font-weight: normal $im;
+            &.icon-checked{
+               font-size: 2.1em $im; 
+            }
         }
         span {
             color: #fff;

@@ -13,6 +13,9 @@ app.controller('HomeCtrl', function($scope, $rootScope, $state,$ionicModal) {
     $scope.goReview = function() {
         $state.go('review');
     }
+    $scope.goList = function() {
+        $state.go('list');
+    }
     $scope.events = [{
             "title": "Today Event",
             "startDate": "2017-08-09",
