@@ -24,28 +24,28 @@
         Organizar por: Data | Local mais próximo
     </div>
     <ul class="list">
-        <li class="item  item-icon-right">
+        <li class="item  item-icon-right" ng-click="openModal()">
           <strong class="block">Maria Aparecida - 69 Anos</strong>
           <span class="block"> <strong>Data:</strong>20/08/17</span>  
           <span class="block"> <strong>Horário:</strong>18:20 até 18:30</span>
           <span class="block"> <strong>Local:</strong>Moóca, Rua General Santiago</span>
         <i class="icon ion-ios-arrow-forward"></i>
         </li>
-        <li class="item  item-icon-right">
+        <li class="item  item-icon-right" ng-click="openModal()">
           <strong class="block">Maria Aparecida - 69 Anos</strong>
           <span class="block"> <strong>Data:</strong>20/08/17</span>  
           <span class="block"> <strong>Horário:</strong>18:20 até 18:30</span>
           <span class="block"> <strong>Local:</strong>Moóca, Rua General Santiago</span>
         <i class="icon ion-ios-arrow-forward"></i>
         </li>
-        <li class="item  item-icon-right">
+        <li class="item  item-icon-right" ng-click="openModal()">
           <strong class="block">Maria Aparecida - 69 Anos</strong>
           <span class="block"> <strong>Data:</strong>20/08/17</span>  
           <span class="block"> <strong>Horário:</strong>18:20 até 18:30</span>
           <span class="block"> <strong>Local:</strong>Moóca, Rua General Santiago</span>
         <i class="icon ion-ios-arrow-forward"></i>
         </li>
-        <li class="item  item-icon-right">
+        <li class="item  item-icon-right" ng-click="openModal()">
           <strong class="block">Maria Aparecida - 69 Anos</strong>
           <span class="block"> <strong>Data:</strong>20/08/17</span>  
           <span class="block"> <strong>Horário:</strong>18:20 até 18:30</span>
@@ -54,4 +54,70 @@
         </li>
     </ul>
     </ion-content>
+    <script id="my-modal.html" type="text/ng-template">
+    <ion-modal-view class="purpleColor modal-view-proposal modal-request-review">
+   <ion-nav-bar>
+    <ion-nav-buttons side="left">
+         <button ng-click="modal.hide()" class="ion-ios-arrow-back btn-icon">
+         </button>
+      </ion-nav-buttons>
+    <ion-nav-title>
+      CUIDADOSO
+    </ion-nav-title>
+      <ion-nav-buttons side="right">
+         <button ng-click="doSomething()" class="icons icon-question btn-icon">
+         </button>
+      </ion-nav-buttons>
+   </ion-nav-bar>
+        <ion-content class="has-nav">
+        <ul class="list request-info">
+            <div ng-if="!isSendProposal || isProposal">
+           <li class="item">
+            <strong class="block">Maria Aparecida - 69 Anos</strong>
+          <span class="block"> <strong>Data:</strong>20/08/17</span>  
+          <span class="block"> <strong>Horário:</strong>18:20 até 18:30</span>
+          <span class="block"> <strong>Local:</strong>Moóca, Rua General Santiago</span>
+         </li>
+         <li class="item">
+            <strong class="block">Observações:</strong>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea id iste, laboriosam dolore, quibusdam eius magnam aperiam natus.
+         </li>
+         <li class="item">
+            <strong>Especialidade:</strong> Fisioterapeuta
+         </li>
+         <li class="item"  ng-if="isProposal">
+            <strong>Valor por hora:</strong> R$ 30,00
+         </li> 
+        </div>
+
+        <li class="item" ng-if="isProposal">
+            <strong class="block">Mensagem para o Idoso:</strong>
+            Olá! Gostaria dessa oportunidade e assim
+conseguir ter uma nova experiência.
+Sou formado em enfermagem, e já estou
+na área de cuidados com a terceira idade
+há 15 anos.
+         </li>
+
+      </ul>
+        <div class="form-proposal" ng-if="isSendProposal && !isProposal">
+            <div class="list">
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Qual o valor da hora?</span>
+                    <input type="text" placeholder="00,00">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Alguma mensagem para o Idoso?</span>
+                    <textarea></textarea>
+                </label>
+            </div>
+        </div>
+        </ion-content>
+    <ion-footer-bar class="hide-on-keyboard-open menu-footer">
+        <button class="send-proposal" ng-click="toogle()" ng-if="!isSendProposal && !isProposal">Realizar proposta</button>
+        <button class="send-proposal" ng-click="done()" ng-if="isSendProposal && !isProposal">Enviar</button>
+        <button class="send-proposal" ng-click="cancel()" ng-if="isProposal">Cancelar proposta</button>
+    </ion-footer-bar>
+    </ion-modal-view>
+    </script>
 </ion-view>

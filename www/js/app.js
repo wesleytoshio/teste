@@ -91,7 +91,12 @@ var app = angular.module('cudadosoApp', ['ionic', 'angular-tiny-calendar'])
             cache: false
         })       
         // Each tab has its own nav history stack:
-
+        .state('clientContact', {
+            url: '/clientContact',
+            templateUrl: 'templates/client-contact.html',
+            controller: 'ClientContactCtrl',
+            cache: false
+        })
         .state('home', {
             url: '/home',
             templateUrl: 'templates/home.html',
