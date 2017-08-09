@@ -57,13 +57,5 @@ app.controller('HomeCtrl', function($scope, $rootScope, $state,$ionicModal) {
         }
     ];
 
-    $rootScope.openModal = function() {
-          $ionicModal.fromTemplateUrl('my-modal.html', {
-      scope: $scope,
-      animation: 'slide-in-up'
-    }).then(function(modal) {
-       modal.show();
-       $rootScope.modal = modal;
-    });
-    };
+
 })

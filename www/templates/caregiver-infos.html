@@ -29,7 +29,7 @@
             Jornalista, pesquisador na área de ciências <br>
 sociais e empreendedor social
         </div>
-    <button class="caregiver-btn-accept">Valor do cuidador</button>
+    <button class="caregiver-btn-accept" ng-click="openModal()">Valor do cuidador</button>
    </ion-content>
    <ion-footer-bar class="hide-on-keyboard-open menu-footer">
       <button type="button" class="btn-icon icons icon-days" ng-click="goPage()" ></button>
@@ -39,4 +39,26 @@ sociais e empreendedor social
       <span>{{isType == 1 ? 'Pertos de você' : 'Solicitar'}}</span>
       </button>
    </ion-footer-bar>
+
+   <!-- MODAL -->
+    <script id="my-modal.html" type="text/ng-template">
+    <ion-modal-view class="pinkColor caregiver-infos caregiver-info-modal">
+       <ion-nav-bar>
+    <ion-nav-buttons side="left">
+         <button ng-click="modal.hide()" class="ion-ios-arrow-back btn-icon">
+         </button>
+      </ion-nav-buttons>
+      <ion-nav-title>
+         CUIDADOSO
+      </ion-nav-title>
+      <ion-nav-buttons side="right">
+         <button ng-click="doSomething()" class="icons icon-question btn-icon">
+         </button>
+      </ion-nav-buttons>
+   </ion-nav-bar>
+    <ion-content class="has-nav">
+      Hello!
+    </ion-content>
+  </ion-modal-view>
+</script>
 </ion-view>
