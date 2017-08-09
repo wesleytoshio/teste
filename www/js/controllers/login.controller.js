@@ -5,5 +5,6 @@ app.controller('LoginCtrl', function($scope, $rootScope, $state, $ionicSlideBoxD
     }
     $scope.goPage = function() {
         $state.go('home');
+        localStorage.setItem('user_type', 0)
     }
 })

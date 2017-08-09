@@ -6,42 +6,42 @@ app.controller('HomeCtrl', function($scope, $rootScope, $state,$ionicModal) {
     }
     $scope.events = [{
             "title": "Today Event",
-            "startDate": "2017-08-09T20:00:27.277Z",
+            "startDate": "2017-08-09",
             "endDate": null,
             "time": "21:00",
             "status": 0
         },
         {
             "title": "Tomorrow",
-            "startDate": "2017-08-09T20:00:27.277Z",
+            "startDate": "2017-08-05",
             "endDate": null,
             "time": "17:15",
             "status": 1
         },
         {
             "title": "All-day event",
-            "startDate": "2017-08-11T20:00:27.277Z",
+            "startDate": "2017-08-15",
             "endDate": null,
             "time": "09:15",
-            "status": 2
+            "status": 1
         },
         {
             "title": "Two in one day!",
-            "startDate": "2017-08-11T20:00:27.277Z",
+            "startDate": "2017-08-11",
             "endDate": null,
             "time": "09:00",
-            "status": 3
+            "status": 0
         },
         {
             "title": "Three in one day!",
-            "startDate": "2017-08-11T20:00:27.277Z",
+            "startDate": "2017-08-11",
             "endDate": null,
             "time": "15:00",
             "status": 1
         },
         {
             "title": "Multi-day event",
-            "startDate": "2017-09-13T20:00:27.277Z",
+            "startDate": "2017-09-13",
             "endDate": null,
             "time": "12:15",
             "status": 1
