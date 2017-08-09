@@ -1,8 +1,17 @@
 app.controller('HomeCtrl', function($scope, $rootScope, $state,$ionicModal) {
+    $scope.$on('$ionicView.loaded', function(){
+    $scope.isType = localStorage.getItem('user_type');
+    });
 
     $rootScope.navBarCurrent = 'pinkColor';
     $scope.goRequest = function() {
         $state.go('request');
+    }
+    $scope.goSignup = function() {
+        $state.go('signup');
+    }
+    $scope.goReview = function() {
+        $state.go('review');
     }
     $scope.events = [{
             "title": "Today Event",
@@ -48,13 +57,13 @@ app.controller('HomeCtrl', function($scope, $rootScope, $state,$ionicModal) {
         }
     ];
 
-    $scope.openModal = function() {
+    $rootScope.openModal = function() {
           $ionicModal.fromTemplateUrl('my-modal.html', {
       scope: $scope,
       animation: 'slide-in-up'
     }).then(function(modal) {
        modal.show();
-       $scope.modal = modal;
+       $rootScope.modal = modal;
     });
     };
 })

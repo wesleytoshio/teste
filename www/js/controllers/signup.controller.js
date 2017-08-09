@@ -16,7 +16,8 @@ app.controller('SignupCtrl', function($scope, $rootScope, $state, $ionicSlideBox
             $ionicSlideBoxDelegate.enableSlide(false);
         },
         store: function() {
-            console.log('pronto');
+            $state.go('home');
+    
         }
     }
     $scope.slideChanged = function(index) {

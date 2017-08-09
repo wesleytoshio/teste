@@ -18,28 +18,18 @@
             <i class="icons icon-days"></i>
             <strong>AGENDAMENTOS</strong>
         </h2>
-          <div class="alert-info" ng-click="openModal()">
+          <div class="alert-info" ng-click="goReview()">
             Atenção!
             <span>Proposta aprovada com sucesso</span>
           </div>
         <div tiny-calendar first-day="1" events="events" week-days='DSTQQSS'></div>
     </ion-content>
     <ion-footer-bar class="hide-on-keyboard-open menu-footer">
-        <button type="button" class="btn-icon icons icon-days"></button>
-        <button type="button" class="btn-icon icons icon-user right"></button>
-        <button type="button" class="btn-circle" ng-click="goRequest()">
-          <i class="icons icon-old"></i>
-          <span>Solicitar</span>
+        <button type="button" class="btn-icon icons icon-days" ></button>
+        <button type="button" class="btn-icon icons icon-user right" ng-click="goSignup()"></button>
+        <button type="button" class="btn-circle" ng-click="goRequest()" ng-class="{'caregiver-button': isType == 1}">
+          <i class="icons" ng-class="isType == 1 ? 'icon-checked' : 'icon-old'"></i>
+          <span>{{isType == 1 ? 'Pertos de você' : 'Solicitar'}}</span>
         </button>
     </ion-footer-bar>
-      <script id="my-modal.html" type="text/ng-template">
-        <ion-modal-view>
-          <ion-header-bar>
-            <h1 class="title">My Modal title</h1>
-          </ion-header-bar>
-          <ion-content>
-            Hello!
-          </ion-content>
-        </ion-modal-view>
-      </script>
 </ion-view>

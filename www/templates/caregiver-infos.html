@@ -1,0 +1,60 @@
+<ion-view class="pinkColor modal-request-review" view-title="CUIDADOSO">
+   <ion-nav-bar>
+      <ion-nav-title>
+         CUIDADOSO
+      </ion-nav-title>
+      <ion-nav-buttons side="right">
+         <button ng-click="doSomething()" class="icons icon-question btn-icon">
+         </button>
+      </ion-nav-buttons>
+   </ion-nav-bar>
+   <ion-content class="has-nav">
+      <h2 class="header-title">
+         <i class="icons icon-check"></i>
+         <strong>SOLICITAÇÃO</strong>
+      </h2>
+      <ul class="list request-info">
+         <li class="item">
+            <strong>Motivo:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque magni necessitatibus vitae aliquid illo eos temporibus.
+         </li>
+         <li class="item">
+            <strong class="block">Período:</strong>
+            De 24/08/2016 às 10:00 <br>
+            Até 24/08/2016 às 12:00 
+         </li>
+         <li class="item">
+            <strong>Local:</strong> Rua: Joaquim Antunes, 352 - 25 
+            Pinheiros, São Paulo/SP
+         </li>
+         <li class="item">
+            <strong>Especialidade:</strong> Fisioterapeuta
+         </li>
+         <li class="item" ng-if="!isClicked" ng-click="showCarigiver()">
+            <strong>Propostas:</strong> Você ainda não recebeu nenhuma proposta para atendimento ao serviço
+         </li>
+         <li class="item item-icon-right" ng-if="isClicked">
+            <strong class="block">Propostas:</strong>
+            José Augusto / 30 Anos <br>
+            Fisioterapeuta 4
+            <img src="img/star.svg" class="fake-star" />
+            <img src="img/star.svg" class="fake-star" />
+            <img src="img/star.svg" class="fake-star" />
+            <img src="img/star.svg" class="fake-star" />
+            <img src="img/star_empty.svg" class="fake-star" /> <br>
+            R$ 300,00
+            <i class="icon ion-ios-arrow-forward"></i>
+         </li>
+      </ul>
+      <button class="cancel-request">
+      Cancelar solicitação
+      </button>
+   </ion-content>
+   <ion-footer-bar class="hide-on-keyboard-open menu-footer">
+      <button type="button" class="btn-icon icons icon-days" ng-click="goPage()" ></button>
+      <button type="button" class="btn-icon icons icon-user right" ng-click="goSignup()"></button>
+      <button type="button" class="btn-circle" ng-click="goRequest()" ng-class="{'caregiver-button': isType == 1}">
+      <i class="icons" ng-class="isType == 1 ? 'icon-checked' : 'icon-old'"></i>
+      <span>{{isType == 1 ? 'Pertos de você' : 'Solicitar'}}</span>
+      </button>
+   </ion-footer-bar>
+</ion-view>

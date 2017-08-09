@@ -64,6 +64,12 @@ var app = angular.module('cudadosoApp', ['ionic', 'angular-tiny-calendar'])
             controller: 'RequestCtrl',
             cache: false
         })
+        .state('review', {
+            url: '/review',
+            templateUrl: 'templates/review.html',
+            controller: 'ReviewCtrl',
+            cache: false
+        })
         // Each tab has its own nav history stack:
 
     .state('home', {

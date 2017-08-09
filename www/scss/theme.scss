@@ -439,6 +439,9 @@ body {
             color:#f63371;
           }
         }
+        .icon-right{
+          right:-15px $im;
+        }
       }
 
     }
@@ -501,10 +504,55 @@ body {
         span {
             color: #fff;
         }
+    &.caregiver-button{
+      line-height:1 $im;
+      span{
+        
+        font-weight:300 $im;
+      }
+    }
     }
 }
-
-
+/*Modals
+-------------------------------------------------- */
+.modal-request-review{
+ ion-content{
+   top: 54px $im;
+   padding:10px 25px;
+   .header-title {
+        color: #f63371;
+        padding: 10px 5px;
+        font-size: 1.7em;
+        i {
+            padding-right: 10px;
+        }
+    }
+      .request-info{
+        .item{
+              white-space: normal $im;
+              border:none;
+              padding:8px $im;
+             // border-bottom:solid 1px #ddd $im;
+              margin:0 $im;
+              .fake-star{
+                width:16px;
+                position:relative;
+                top:1px;
+              }
+        }
+      }
+ }
+    .cancel-request{
+      display:block;
+      margin:0 auto;
+      border-radius:40px;
+      height:44px;
+      color:#fff;
+      background-color:#a93c56;
+      padding: 0 50px;
+      border:none;
+    }
+}
 /*NAVBAR
 -------------------------------------------------- */
 
@@ -600,4 +648,11 @@ body {
 
 .icon-old:before {
     content: "\f107";
+}
+
+.icon-checked:before {
+    content: "\f100";
+}
+.icon-check:before {
+    content: "\f105";
 }

@@ -10,7 +10,7 @@
         <h2 class="login-header">
             <i class="icons icon-days" ng-if="!request"></i>
             <strong ng-if="!request">SOLICITAR SERVIÇO</strong>
-            <i class="icons icon-days" ng-if="request"></i>
+            <i class="icons icon-check" ng-if="request"></i>
             <strong ng-if="request">SOLICITAÇÃO ENVIADA</strong>
         </h2>
         <div class="list" ng-if="!request">
@@ -67,7 +67,7 @@
     </ion-content>
     <ion-footer-bar class="hide-on-keyboard-open menu-footer">
         <button type="button" class="btn-icon icons icon-days" ng-click="goPage()"></button>
-        <button type="button" class="btn-icon icons icon-user right"></button>
+        <button type="button" class="btn-icon icons icon-user right" ng-click="goSignup()"></button>
         <button type="button" class="btn-circle" ng-click="request ? goPage() : sendRequest()">
           <i class="icons icon-old"></i>
           <span>Solicitar</span>
