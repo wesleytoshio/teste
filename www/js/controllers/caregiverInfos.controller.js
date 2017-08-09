@@ -16,8 +16,7 @@ app.controller('CaregiverInfosCtrl', function($scope, $rootScope, $state, $ionic
     $scope.goRequest = function() {
         $state.go('request');
     }
-    $scope.request = false;
-    $scope.sendRequest = function() {
-        $scope.request = !$scope.request;
+    $scope.goReview = function() {
+        $state.go('review');
     }
 })

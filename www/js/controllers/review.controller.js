@@ -16,8 +16,7 @@ app.controller('ReviewCtrl', function($scope, $rootScope, $state, $ionicTabsDele
     $scope.goRequest = function() {
         $state.go('request');
     }
-    $scope.request = false;
-    $scope.sendRequest = function() {
-        $scope.request = !$scope.request;
+    $scope.goCaregiverInfos = function() {
+        $state.go('caregiverInfos');
     }
 })
