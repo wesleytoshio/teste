@@ -1,0 +1,62 @@
+<ion-view class="pinkColor caregiver-infos caregiver-info-modal">
+       <ion-nav-bar>
+    <ion-nav-buttons side="left">
+         <button ng-click="goInfos()" class="ion-ios-arrow-back btn-icon">
+         </button>
+      </ion-nav-buttons>
+      <ion-nav-title>
+         CUIDADOSO
+      </ion-nav-title>
+      <ion-nav-buttons side="right">
+         <button ng-click="doSomething()" class="icons icon-question btn-icon">
+         </button>
+      </ion-nav-buttons>
+   </ion-nav-bar>
+    <ion-content class="has-nav">
+      <div class="box-rate">
+        <div class="row">
+            <div class="col col-75"><strong>Hora:</strong> R$ 23,00 x2</div>
+            <div class="col text-right">R$ 46,00</div>
+        </div>
+        <div class="row border-bottom">
+            <div class="col col-75"><strong>Taxa cuidadoso:</strong></div>
+            <div class="col text-right">R$ 19,00</div>
+        </div>
+        <div class="row">
+            <div class="col col-50"><strong>Total:</strong></div>
+            <div class="col text-right">R$ 65,00</div>
+        </div>
+      </div>
+      <div class="box-education">
+          <div class="row">
+                <div class="col border-right"><b>Formação</b></div>
+                <div class="col">Ensino superior completo</div>
+            </div>
+            <div class="row">
+                <div class="col border-right"><b>Profissão atual</b></div>
+                <div class="col">Jornalista</div>
+            </div>
+            <div class="row">
+                <div class="col border-right"><b>Idiomas</b></div>
+                <div class="col">Ingles e Espanhol</div>
+            </div>
+      </div>
+      <button class="btn-approve">
+        Aprovar
+      </button>
+      <button class="btn-not-approved">
+        Voltar para solicitação
+      </button>
+      <button class="btn-comments" ng-click="goComments()">
+        Comentários <i class="ion-ios-arrow-forward"></i>
+      </button>
+    </ion-content>
+   <ion-footer-bar class="hide-on-keyboard-open menu-footer">
+      <button type="button" class="btn-icon icons icon-days" ng-click="goPage()" ></button>
+      <button type="button" class="btn-icon icons icon-user right" ng-click="goSignup()"></button>
+      <button type="button" class="btn-circle" ng-click="goRequest()" ng-class="{'caregiver-button': isType == 1}">
+      <i class="icons" ng-class="isType == 1 ? 'icon-checked' : 'icon-old'"></i>
+      <span>{{isType == 1 ? 'Pertos de você' : 'Solicitar'}}</span>
+      </button>
+   </ion-footer-bar>
+</ion-view>

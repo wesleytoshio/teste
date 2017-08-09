@@ -76,6 +76,18 @@ var app = angular.module('cudadosoApp', ['ionic', 'angular-tiny-calendar'])
             controller: 'CaregiverInfosCtrl',
             cache: false
         })
+        .state('caregiverValues', {
+            url: '/caregiverValues',
+            templateUrl: 'templates/caregiver-values.html',
+            controller: 'CaregiverValuesCtrl',
+            cache: false
+        })
+        .state('caregiverComments', {
+            url: '/caregiverComments',
+            templateUrl: 'templates/caregiver-comments.html',
+            controller: 'CaregiverCommentsCtrl',
+            cache: false
+        })        
         // Each tab has its own nav history stack:
 
     .state('home', {

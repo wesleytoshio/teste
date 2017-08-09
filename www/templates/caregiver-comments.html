@@ -1,0 +1,67 @@
+<ion-view class="purpleColor modal-request-review" view-title="CUIDADOSO">
+   <ion-nav-bar>
+    <ion-nav-buttons side="left">
+         <button ng-click="goReview()" class="ion-ios-arrow-back btn-icon">
+         </button>
+      </ion-nav-buttons>
+      <ion-nav-buttons side="right">
+         <button ng-click="doSomething()" class="icons icon-question btn-icon">
+         </button>
+      </ion-nav-buttons>
+   </ion-nav-bar>
+     <ion-content class="has-nav">
+      <h2 class="header-title">
+         <i class="icons icon-comments"></i>
+         <strong>COMENTÁRIOS</strong>
+      </h2>
+      <ul class="list request-info">
+         <li class="item item-comments">
+            <strong class="block">Silene Garcia</strong>
+            <span class="star-ratings">
+            <img src="img/star.svg" class="fake-star" />
+            <img src="img/star.svg" class="fake-star" />
+            <img src="img/star.svg" class="fake-star" />
+            <img src="img/star.svg" class="fake-star" />
+            <img src="img/star_empty.svg" class="fake-star" />
+            <span>22/08/17</span>
+            </span>
+            Segunda vez que a Renata nos atende, sempre muito cordical, carinhosa e atenciosa com meus filhos!
+         </li>
+        <li class="item item-comments">
+            <strong class="block">Silene Garcia</strong>
+            <span class="star-ratings">
+            <img src="img/star.svg" class="fake-star" />
+            <img src="img/star.svg" class="fake-star" />
+            <img src="img/star_empty.svg" class="fake-star" />
+            <img src="img/star_empty.svg" class="fake-star" />
+            <img src="img/star_empty.svg" class="fake-star" />
+            <span>22/08/17</span>
+            </span>
+            Segunda vez que a Renata nos atende, sempre muito cordical, carinhosa e atenciosa com meus filhos!
+         </li>
+        <li class="item item-comments">
+            <strong class="block">Silene Garcia</strong>
+            <span class="star-ratings">
+            <img src="img/star.svg" class="fake-star" />
+            <img src="img/star.svg" class="fake-star" />
+            <img src="img/star.svg" class="fake-star" />
+            <img src="img/star.svg" class="fake-star" />
+            <img src="img/star_empty.svg" class="fake-star" />
+            <span>22/08/17</span>
+            </span>
+            Segunda vez que a Renata nos atende, sempre muito cordical, carinhosa e atenciosa com meus filhos!
+         </li>
+         
+      </ul>
+
+   </ion-content>
+   <ion-footer-bar class="hide-on-keyboard-open menu-footer">
+      <button type="button" class="btn-icon icons icon-days" ng-click="goPage()" ></button>
+      <button type="button" class="btn-icon icons icon-user right" ng-click="goSignup()"></button>
+      <button type="button" class="btn-circle" ng-click="goRequest()" ng-class="{'caregiver-button': isType == 1}">
+      <i class="icons" ng-class="isType == 1 ? 'icon-checked' : 'icon-old'"></i>
+      <span>{{isType == 1 ? 'Pertos de você' : 'Solicitar'}}</span>
+      </button>
+   </ion-footer-bar>
+
+</ion-view>

@@ -29,7 +29,7 @@
             Jornalista, pesquisador na área de ciências <br>
 sociais e empreendedor social
         </div>
-    <button class="caregiver-btn-accept" ng-click="openModal()">Valor do cuidador</button>
+    <button class="caregiver-btn-accept" ng-click="goCaregiverValues()">Valor do cuidador</button>
    </ion-content>
    <ion-footer-bar class="hide-on-keyboard-open menu-footer">
       <button type="button" class="btn-icon icons icon-days" ng-click="goPage()" ></button>
@@ -57,7 +57,43 @@ sociais e empreendedor social
       </ion-nav-buttons>
    </ion-nav-bar>
     <ion-content class="has-nav">
-      Hello!
+      <div class="box-rate">
+        <div class="row">
+            <div class="col col-75"><strong>Hora:</strong> R$ 23,00 x2</div>
+            <div class="col text-right">R$ 46,00</div>
+        </div>
+        <div class="row border-bottom">
+            <div class="col col-75"><strong>Taxa cuidadoso:</strong></div>
+            <div class="col text-right">R$ 19,00</div>
+        </div>
+        <div class="row">
+            <div class="col col-50"><strong>Total:</strong></div>
+            <div class="col text-right">R$ 65,00</div>
+        </div>
+      </div>
+      <div class="box-education">
+          <div class="row">
+                <div class="col border-right"><b>Formação</b></div>
+                <div class="col">Ensino superior completo</div>
+            </div>
+            <div class="row">
+                <div class="col border-right"><b>Profissão atual</b></div>
+                <div class="col">Jornalista</div>
+            </div>
+            <div class="row">
+                <div class="col border-right"><b>Idiomas</b></div>
+                <div class="col">Ingles e Espanhol</div>
+            </div>
+      </div>
+      <button class="btn-approve">
+        Aprovar
+      </button>
+      <button class="btn-not-approved">
+        Voltar para solicitação
+      </button>
+      <button class="btn-comments">
+        Comentários <i class="ion-ios-arrow-forward"></i>
+      </button>
     </ion-content>
   </ion-modal-view>
 </script>
