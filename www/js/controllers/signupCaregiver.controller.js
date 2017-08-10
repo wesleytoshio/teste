@@ -5,7 +5,7 @@ app.controller('SignupCaregiverCtrl', function($scope, $rootScope, $state, $ioni
     }
 
     $scope.signup = {
-        current: 2,
+        current: 0,
         next: function() {
             $ionicSlideBoxDelegate.next();
         },
@@ -42,7 +42,7 @@ app.controller('SignupCaregiverCtrl', function($scope, $rootScope, $state, $ioni
             myPopup.close();
             localStorage.setItem('user_type', 1);
             $state.go('home'); //close the popup after 3 seconds for some reason
-        }, 5000);
+        }, 3000);
     };
 
     $scope.popupList = function() {

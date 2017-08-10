@@ -39,6 +39,11 @@ var app = angular.module('cudadosoApp', ['ionic', 'angular-tiny-calendar', 'ion-
             templateUrl: 'templates/onboarding.html',
             controller: 'OnboardingCtrl'
         })
+        .state('perfil', {
+            url: '/perfil',
+            templateUrl: 'templates/perfil.html',
+            controller: 'PerfilCtrl'
+        })
         .state('gps', {
             url: '/gps',
             templateUrl: 'templates/gps.html',

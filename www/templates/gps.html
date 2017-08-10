@@ -1,6 +1,7 @@
 <ion-view view-title="Allow GPS" class="allow-gps">
     <ion-content scroll="false">
-        <h1>Descubra cuidadores <br> perto de você</h1>
+        <h1 ng-if="isType == 0">Descubra cuidadores <br> perto de você</h1>
+        <h1 ng-if="isType == 1">Encontre idosos <br>  que precisam de  <br> cuidadores</h1>
         <img src="img/allow-gps.svg" alt="">
         <p>Permita que o Cuidadoso acesse <br>a sua localização enquanto você <br>usa o aplicativo</p>
         <button type="button" class="btn-allow" ng-click="goPage()">Autorizar</button>
