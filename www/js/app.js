@@ -1,6 +1,6 @@
-var app = angular.module('cudadosoApp', ['ionic', 'angular-tiny-calendar'])
+var app = angular.module('cudadosoApp', ['ionic', 'angular-tiny-calendar', 'ion-datetime-picker'])
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform, $rootScope, $ionicPickerI18n) {
     $ionicPlatform.ready(function() {
         // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
         // for form inputs)
@@ -14,9 +14,17 @@ var app = angular.module('cudadosoApp', ['ionic', 'angular-tiny-calendar'])
             StatusBar.styleDefault();
         }
     });
+    $ionicPickerI18n.weekdays = ["D", "S", "T", "Q", "Q", "S", "S"];
+    $ionicPickerI18n.months = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+    $ionicPickerI18n.ok = "Definir";
+    $ionicPickerI18n.cancel = "Cancelar";
+    $ionicPickerI18n.okClass = "button-positive button-purple";
+    $ionicPickerI18n.cancelClass = "button-stable";
+    $ionicPickerI18n.arrowButtonClass = "button-positive button-arrow-calendar";
 })
 
 .config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
+    moment.locale('pt-BR');
     $ionicConfigProvider.tabs.position('top');
     // Ionic uses AngularUI Router which uses the concept of states
     // Learn more here: https://github.com/angular-ui/ui-router
@@ -95,7 +103,7 @@ var app = angular.module('cudadosoApp', ['ionic', 'angular-tiny-calendar'])
             templateUrl: 'templates/list.html',
             controller: 'ListCtrl',
             cache: false
-        })       
+        })
         // Each tab has its own nav history stack:
         .state('clientContact', {
             url: '/clientContact',

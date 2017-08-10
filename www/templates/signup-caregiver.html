@@ -57,14 +57,14 @@
             </ion-slide>
             <ion-slide class="slide-one">
                 <header class="step">
-                    <span class="amount-step">3/3</span>
+                    <span class="amount-step">2/3</span>
                     <strong>CONTE MAIS SOBRE COMO  <br>VOCÊ PODE AJUDAR UM IDOSO</strong>
                 </header>
-                <button class="select-drop icon ion-ios-arrow-down">
-                    Qual serviço você presta?
+                <button class="select-drop icon ion-ios-arrow-down" ng-click="popupList()">
+                     {{selected ?  selected : 'Qual serviço você presta?'}}
                 </button>
                 <div class="list textarea" padding>
-                <label class="item item-input item-stacked-label">
+                    <label class="item item-input item-stacked-label">
                     <span class="input-label">Qual sua formação? Quais cursos ja fez?</span>
                     <textarea placeholder="Campo para escrever"></textarea>
                 </label>
@@ -72,17 +72,17 @@
             </ion-slide>
             <ion-slide class="slide-one">
                 <header class="step">
-                    <span class="amount-step">2/3</span>
+                    <span class="amount-step">3/3</span>
                     <strong>CONTE UM POUCO SOBRE  <br>SUA EXPERIÊNCIA</strong>
                 </header>
                 <div class="list textarea" padding>
-                <label class="item item-input item-stacked-label">
+                    <label class="item item-input item-stacked-label">
                     <span class="input-label">Qual sua formação? Quais cursos ja fez?</span>
                     <textarea placeholder="Campo para escrever"></textarea>
                 </label>
                 </div>
-                <button class="select-drop icon ion-ios-arrow-down icon-days-b">
-                    dia / mês / ano
+                <button class="select-drop icon ion-ios-arrow-down icon-days-b" ion-datetime-picker date ng-model="dateValue">
+                    {{dateValue ? '' : 'dia / mês / ano'}} {{dateValue| date: "dd"}} {{dateValue ? '/': ''}} {{dateValue| date: "MM"}} {{dateValue ? '/': ''}} {{dateValue| date: "yyyy"}}
                 </button>
 
                 <div class="send-photo">
@@ -96,12 +96,17 @@
         <button type="button" class="signin" ng-click="signup.current == 0 ? goPage() : signup.back()">{{signup.current == 0 ? 'Já sou cadastrado' : 'Voltar'}}</button>
         <button type="button" class="next-step" ng-click="signup.current == 2 ? signup.store() : signup.next()"> {{signup.current == 2 ? 'Enviar dados' : 'Próximo passo'}}</button>
     </ion-footer-bar>
-<script id="my-popup.html" type="text/ng-template">
-    <img src="img/like.svg" />
-    <p>Parabéns, seus dados foram
-cadastrados com sucesso!</p>
-<br>Aguarde que o cuidadoso entrará em 
-contato com você para liberar o uso 
-do aplicativo.
-</script>
+    <script id="my-popup.html" type="text/ng-template">
+        <img src="img/like.svg" />
+        <p>Parabéns, seus dados foram cadastrados com sucesso!</p>
+        <br>Aguarde que o cuidadoso entrará em contato com você para liberar o uso do aplicativo.
+    </script>
+    <script id="templates/list.html" type="text/ng-template">
+        <ion-list>
+            <ion-radio ng-model="choice" ng-repeat="ra in [1,2,3,4,5,6] track by $index" ng-value="$index" ng-model="selectedIndex" ng-click="closePopup($index)">Choose {{$index}}</ion-radio>
+        </ion-list>
+    </script>
+    <script id="templates/birth.html" type="text/ng-template">
+        <input type="date" placeholder="Data de nascimento" class="input-date" is-focused="true">
+    </script>
 </ion-view>
