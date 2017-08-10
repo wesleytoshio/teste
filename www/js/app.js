@@ -48,6 +48,12 @@ var app = angular.module('cudadosoApp', ['ionic', 'angular-tiny-calendar'])
             controller: 'SignupCtrl',
             cache: false
         })
+        .state('signupCaregiver', {
+            url: '/signup-caregiver',
+            templateUrl: 'templates/signup-caregiver.html',
+            controller: 'SignupCaregiverCtrl',
+            cache: false
+        })
         .state('login', {
             url: '/login',
             templateUrl: 'templates/login.html',

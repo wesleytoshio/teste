@@ -217,7 +217,126 @@ body {
     }
 }
 
+/*SIGNUP CAREGIVER
+-------------------------------------------------- */
 
+.singup-caregiver {
+    .bar-header {
+        background-color: #592b5f;
+        .title {
+            color: #fff;
+            font-weight: bold;
+        }
+        .btn-icon {
+            font-size: 1.7em;
+            background-color: transparent;
+            border: none;
+            color: #fff;
+        }
+    }
+    .step {
+        height: 64px;
+        position: relative;
+        padding:10px;
+        &.text-inline{
+            line-height:44px;
+        }
+        strong {
+            font-size: 1.3em;
+            color: #592b5f;
+        }
+        .amount-step {
+            width: 42px;
+            height: 42px;
+            display: block;
+            border-radius: 50%;
+            border: solid 1px #592b5f;
+            position: absolute;
+            line-height: 38px;
+            text-align: center;
+            font-size: 1.1em;
+            right: 10px;
+            top: 50%;
+            color: #592b5f;
+            transform: translateY(-50%);
+        }
+    }
+    .item-floating-label,
+    .item-stacked-label {
+        border-bottom: solid 1px #eee $im;
+        padding: 0 $im;
+        .input-label {
+            width: auto $im;
+            max-width: none $im;
+        }
+    }
+    .inline-inputs {
+        .col {
+            padding-left: 0 $im;
+            .input-label {
+                width: auto $im;
+                max-width: none $im;
+            }
+        }
+    }
+    .add-old-aged {
+        float: right;
+        background-color: transparent;
+        border: none;
+        color: #0692d2;
+        font-weight: bold;
+        font-size: 1.1em;
+    }
+    .textarea{
+        .item-input{
+            border:none;
+        }
+    }
+    .send-photo{
+        text-align:center;
+        padding:20px;
+        h2{
+            font-size:1.3em;
+        }
+        i{
+            font-size:3em;
+            padding:20px;
+            display:block;
+            color:#333;
+        }
+    }
+}
+/*DROPDOWN
+-------------------------------------------------- */
+.select-drop{
+    width:95%;
+    height:54px;
+    border-radius:4px;
+    background-color:#f8f8f8;
+    border: 1px solid #eee;
+    text-align: center;
+    margin: 15px auto;
+    display:block;
+    position:relative;
+    font-size:1.3em;
+    &:before{
+        right: 20px;
+        left:initial $im;
+        position:absolute;
+        top:50%;
+        transform:translateY(-50%);
+        font-size:1.5em;
+        font-weight:bold;
+    }
+    &:after{
+        left: 20px;
+        position:absolute;
+        top:50%;
+        transform:translateY(-50%);
+        font-size:1.5em;
+        color:#f63371;
+    }
+}
 /*LOGIN
 -------------------------------------------------- */
 
@@ -883,6 +1002,12 @@ body {
     content: "\f109";
 }
 
+.icon-days-b:after {
+    content: "\f109";
+    font-family: Flaticon;
+    font-style: normal;
+}
+
 .icon-logout:before {
     content: "\f106";
 }
@@ -903,4 +1028,7 @@ body {
 }
 .icon-comments:before {
     content: "\f10c";
+}
+.icon-camera:before {
+    content: "\f102";
 }
