@@ -57,7 +57,7 @@
             </ion-slide>
             <ion-slide class="slide-one">
                 <header class="step">
-                    <span class="amount-step">2/3</span>
+                    <span class="amount-step">3/3</span>
                     <strong>CONTE MAIS SOBRE COMO  <br>VOCÊ PODE AJUDAR UM IDOSO</strong>
                 </header>
                 <button class="select-drop icon ion-ios-arrow-down">
@@ -96,4 +96,12 @@
         <button type="button" class="signin" ng-click="signup.current == 0 ? goPage() : signup.back()">{{signup.current == 0 ? 'Já sou cadastrado' : 'Voltar'}}</button>
         <button type="button" class="next-step" ng-click="signup.current == 2 ? signup.store() : signup.next()"> {{signup.current == 2 ? 'Enviar dados' : 'Próximo passo'}}</button>
     </ion-footer-bar>
+<script id="my-popup.html" type="text/ng-template">
+    <img src="img/like.svg" />
+    <p>Parabéns, seus dados foram
+cadastrados com sucesso!</p>
+<br>Aguarde que o cuidadoso entrará em 
+contato com você para liberar o uso 
+do aplicativo.
+</script>
 </ion-view>

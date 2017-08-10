@@ -306,6 +306,33 @@ body {
         }
     }
 }
+.caregiver-popup-success{
+    .popup{
+        background-color:transparent $im;
+        width:80%;
+        .popup-head{
+            display:none;
+        }
+        .popup-body{
+            min-height:70vmin;
+            border-radius:10px;
+            text-align:center;
+            padding:20px;
+            background-color:#43b3a1;
+            font-size:1.3em;
+            color:#fff;
+            p{
+                text-transform:uppercase;
+                font-weight:700;
+            }
+            img{
+                width:96px;
+                display:block;
+                margin:20px auto;
+            }
+        }
+    }
+}
 /*DROPDOWN
 -------------------------------------------------- */
 .select-drop{
