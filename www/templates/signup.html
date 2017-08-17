@@ -94,34 +94,34 @@
                     <span class="amount-step">3/3</span>
                     <strong>CADASTRO DO ENDEREÇO</strong>
                 </header>
-                <div class="list">
+                <form class="list" name="address"  form-validate>
                     <label class=" item-input item-floating-label">
                     <span class="input-label">Identificação</span>
-                    <input type="text" placeholder="Identificação"/>
+                    <input type="text" placeholder="Identificação" ng-model="data.identification" required="true"/>
                     </label>
                     <label class=" item-input item-floating-label">
                     <span class="input-label">CEP</span>
-                    <input type="text"  placeholder="CEP"/>
+                    <input type="text"  placeholder="CEP" ng-model="data.cep" required="true"/>
                     </label>
                     <label class=" item-input item-floating-label">
                     <span class="input-label">Endereço</span>
-                    <input type="text" placeholder="Endereço"/>
+                    <input type="text" placeholder="Endereço" ng-model="data.address" required="true"/>
                     </label>
                     <label class=" item-input item-floating-label">
                     <span class="input-label">Bairro</span>
-                    <input type="password" placeholder="Medicamentos"/>
+                    <input type="text" placeholder="Medicamentos" ng-model="data.burgh" required="true"/>
                     </label>
                     <div class="row inline-inputs">
                         <div class="col">
                             <label class=" item-input item-floating-label">
                      <span class="input-label">Número</span>
-                     <input type="password" placeholder="Número"/>
+                     <input type="number" placeholder="Número" ng-model="data.number" required="true"/>
                      </label>
                         </div>
                         <div class="col">
                             <label class=" item-input item-floating-label">
                      <span class="input-label">Complemento</span>
-                     <input type="password" placeholder="Complemento"/>
+                     <input type="text" placeholder="Complemento" ng-model="data.complement" required="true"/>
                      </label>
                         </div>
                     </div>
@@ -129,17 +129,17 @@
                         <div class="col">
                             <label class=" item-input item-floating-label">
                      <span class="input-label">Estado</span>
-                     <input type="password" placeholder="Estado"/>
+                     <input type="text" placeholder="Estado" ng-model="data.state" required="true"/>
                      </label>
                         </div>
                         <div class="col">
                             <label class=" item-input item-floating-label">
                      <span class="input-label">Cidade</span>
-                     <input type="password" placeholder="Cidade"/>
+                     <input type="text" placeholder="Cidade" ng-model="data.city" required="true"/>
                      </label>
                         </div>
                     </div>
-                </div>
+                </form>
             </ion-slide>
         </ion-slide-box>
     </ion-content>
