@@ -13,7 +13,7 @@ app.controller('HomeCtrl', function($scope, $rootScope, $state,$ionicModal) {
     $scope.goReview = function() {
         $state.go('review');
     }
-    $scope.goList = function() {
+    $scope.goProposal = function() {
         $state.go('list');
     }
     $scope.events = [{

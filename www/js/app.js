@@ -1,19 +1,59 @@
-var app = angular.module('cudadosoApp', ['ionic', 'angular-tiny-calendar', 'ion-datetime-picker'])
+var app = angular.module('cudadosoApp', ['ionic', 'ngCordova', 'angular-tiny-calendar', 'ion-datetime-picker'])
 
-.run(function($ionicPlatform, $rootScope, $ionicPickerI18n) {
+.run(function($ionicPlatform, $rootScope, $ionicPickerI18n, $cordovaGeolocation,$window) {
     $ionicPlatform.ready(function() {
         // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
         // for form inputs)
         if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
             cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
             cordova.plugins.Keyboard.disableScroll(true);
-
+            window.addEventListener('native.keyboardshow', function(){
+              document.body.classList.add('keyboard-open');
+            });
         }
         if (window.StatusBar) {
             // org.apache.cordova.statusbar required
             StatusBar.styleDefault();
         }
     });
+    //function for allowed GPS
+    $rootScope.allowGPS = function(){
+          $cordovaGeolocation
+            .getCurrentPosition({timeout: 10000, enableHighAccuracy: false})
+            .then(function (position) {
+                $rootScope.location = {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude
+                }
+              console.log(position);
+              localStorage.setItem('allowGps', true);
+              //$window.location.reload();
+              $rootScope.showToast('GPS Ativado', 'short', 'bottom');
+            }, function(err) {
+              // error
+             // $window.location.reload();
+              localStorage.setItem('allowGps', true);
+              $rootScope.showToast('GPS Ativado', 'short', 'bottom');
+            });
+        
+    }
+    //if allowed gps 
+    if(localStorage.getItem('allowGps')){
+        $cordovaGeolocation.watchPosition({timeout: 10000, enableHighAccuracy: false}).then(
+        null,
+        function(err) {
+          // error
+         console.log('error');
+        },
+        function(position) {
+            $rootScope.location = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+            }
+          console.log('watch', position);
+          
+      });
+    }
     $ionicPickerI18n.weekdays = ["D", "S", "T", "Q", "Q", "S", "S"];
     $ionicPickerI18n.months = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
     $ionicPickerI18n.ok = "Definir";
@@ -22,14 +62,9 @@ var app = angular.module('cudadosoApp', ['ionic', 'angular-tiny-calendar', 'ion-
     $ionicPickerI18n.cancelClass = "button-stable";
     $ionicPickerI18n.arrowButtonClass = "button-positive button-arrow-calendar";
 })
-
+.constant('GOOGLE_KEY', 'AIzaSyBcdola8PQIYUmuZ2EPpbs1KpoK_hxN9f4')
 .config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
     moment.locale('pt-BR');
-    $ionicConfigProvider.tabs.position('top');
-    // Ionic uses AngularUI Router which uses the concept of states
-    // Learn more here: https://github.com/angular-ui/ui-router
-    // Set up the various states which the app can be in.
-    // Each state's controller can be found in controllers.js
     $stateProvider
 
     // setup an abstract state for the tabs directive

@@ -5,14 +5,14 @@ app.controller('ListCtrl', function($scope, $state,$ionicModal) {
     $scope.goHome = function() {
         $state.go('home');
     }
-    $ionicModal.fromTemplateUrl('my-modal.html', {
+    $ionicModal.fromTemplateUrl('proposal.html', {
     scope: $scope,
     animation: 'slide-in-up'
     }).then(function(modal) {
-        $scope.modal = modal;
+        $scope.proposal = modal;
     });
     $scope.openModal = function() {
-        $scope.modal.show();
+        $scope.proposal.show();
     };
     $scope.isSendProposal = false;
     $scope.toogle = function(){
@@ -24,7 +24,7 @@ app.controller('ListCtrl', function($scope, $state,$ionicModal) {
     $scope.cancel = function(){
         $scope.isProposal = false;
         $scope.isSendProposal = false;
-        $scope.modal.hide();
+        $scope.proposal.hide();
         $state.go('clientContact');
     }
 })

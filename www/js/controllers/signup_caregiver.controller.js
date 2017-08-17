@@ -42,13 +42,13 @@ app.controller('SignupCaregiverCtrl', function($scope, $rootScope, $state, $ioni
             myPopup.close();
             localStorage.setItem('user_type', 1);
             $state.go('home'); //close the popup after 3 seconds for some reason
-        }, 3000);
+        }, 1000);
     };
 
     $scope.popupList = function() {
         var popup = $ionicPopup.alert({
             title: 'Lista de Serviços',
-            templateUrl: 'templates/list.html',
+            templateUrl: 'templates/list-services.html',
             cssClass: 'list-popup',
             scope: $scope,
             buttons: [{ text: 'Fechar' }]
@@ -78,4 +78,7 @@ app.controller('SignupCaregiverCtrl', function($scope, $rootScope, $state, $ioni
             popup.close();
         }
     }
+    $scope.$on("$destroy", function() {
+        $scope.closePop();
+    });
 })
