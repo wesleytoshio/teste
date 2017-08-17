@@ -4,8 +4,9 @@ app.controller('SignupCtrl', function($scope, $rootScope, $state, $ionicSlideBox
         $state.go('login');
     }
     $scope.data = {};
+    $scope.olds = [{}];
     $scope.signup = {
-        current: 0,
+        current: 1,
         next: function() {
             $ionicSlideBoxDelegate.next();
             console.log($scope.data);
@@ -21,6 +22,10 @@ app.controller('SignupCtrl', function($scope, $rootScope, $state, $ionicSlideBox
             $state.go('home');
     
         }
+    }
+    $scope.add = function(){
+        console.log($scope.olds);
+       $scope.olds.push({});
     }
     $scope.slideChanged = function(index) {
         $scope.signup.current = index;

@@ -65,29 +65,29 @@
                     <span class="amount-step">2/3</span>
                     <strong>CADASTRO DO IDOSO</strong>
                 </header>
-                <form class="list" name="old" form-validate>
+                <form class="list" name="old" ng-repeat="old in olds" form-validate>
                     <label class=" item-input item-floating-label">
                     <span class="input-label">Nome</span>
-                    <input type="text" placeholder="Nome" ng-model="data.name" required="true"/>
+                    <input type="text" placeholder="Nome" ng-model="olds[$index].name" required="true"/>
                     </label>
                     <label class=" item-input item-floating-label">
                     <span class="input-label">Gênero</span>
-                    <input type="text"  placeholder="Gênero" ng-model="data.gender" required="true"/>
+                    <input type="text"  placeholder="Gênero" ng-model="olds[$index].gender" required="true"/>
                     </label>
                     <label class=" item-input item-floating-label">
                     <span class="input-label">Cuidados especiais</span>
-                    <input type="text" placeholder="Cuidados especiais" ng-model="data.special" required="true"/>
+                    <input type="text" placeholder="Cuidados especiais" ng-model="olds[$index].special" required="true"/>
                     </label>
                     <label class=" item-input item-floating-label">
                     <span class="input-label">Medicamentos</span>
-                    <input type="text" placeholder="Medicamentos" ng-model="data.medicines" required="true"/>
+                    <input type="text" placeholder="Medicamentos" ng-model="olds[$index].medicines" required="true"/>
                     </label>
                     <label class=" item-input item-floating-label">
                     <span class="input-label">Descrição / perfil / Observações</span>
-                    <input type="text" placeholder="Descrição / perfil / Observações" ng-model="data.description" required="true"/>
+                    <input type="text" placeholder="Descrição / perfil / Observações" ng-model="olds[$index].description" required="true"/>
                     </label>
                 </form>
-                <button type="button" class="add-old-aged">Adicionar outro idoso</button>
+                <button type="button" class="add-old-aged" ng-click="add()">Adicionar outro idoso</button>
             </ion-slide>
             <ion-slide class="slide-one">
                 <header class="step">
