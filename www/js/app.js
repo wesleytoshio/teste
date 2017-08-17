@@ -62,6 +62,7 @@ var app = angular.module('cudadosoApp', ['ionic', 'ngCordova', 'angular-tiny-cal
     $ionicPickerI18n.cancelClass = "button-stable";
     $ionicPickerI18n.arrowButtonClass = "button-positive button-arrow-calendar";
 })
+.constant('BASE_URL', 'http://appockserver14.cloudapp.net/api.appock.co/api_cuidadoso_v1/public/v1/app')
 .constant('GOOGLE_KEY', 'AIzaSyBcdola8PQIYUmuZ2EPpbs1KpoK_hxN9f4')
 .config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
     moment.locale('pt-BR');
