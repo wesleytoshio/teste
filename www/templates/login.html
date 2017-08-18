@@ -7,20 +7,26 @@
     </ion-nav-bar>
     <ion-content padding>
         <h2 class="login-header"><i class="icons icon-login"></i><strong>LOGIN</strong></h2>
-        <div class="list">
-            <label class=" item-input item-floating-label">
+        <div class="alert-info log-error" ng-click="goReview()" ng-if="">
+            Atenção!
+            <span>Sua conta ainda não foi verificada</span>
+          </div>
+        <form name="form" class="list"  form-validate>
+          <label class=" item-input item-floating-label"  ng-class="{errorInput:emailValidate || signin.error.emailNotExist || signin.error.incorrectPassword}">
          <span class="input-label">E-mail</span>
-         <input type="text"  placeholder="E-mail"/>
+          <span class="label-error" ng-if="emailValidate">Digite um email válido</span>
+          <span class="label-error" ng-if="signin.error.emailNotExist">Email não encontrado</span>
+          <span class="label-error" ng-if="signin.error.incorrectPassword">Email ou senha incorreto</span>
+         <input type="email"  placeholder="E-mail" ng-model="data.email" required="true" ng-click="emailValidate=false;signin.error.emailNotExist=false;signin.error.incorrectPassword=false" validate-email/>
          </label>
             <label class=" item-input item-floating-label">
              <span class="input-label">Senha</span>
-         <input type="password"  placeholder="Senha"/>
+         <input type="password"  placeholder="Senha" ng-model="data.password" required="true"/>
          </label>
-        </div>
-        </div>
+        </form>
     </ion-content>
     <ion-footer-bar class="hide-on-keyboard-open">
         <button type="button" class="signin" ng-click="goSignup()">Não sou cadastrado</button>
-        <button type="button" class="next-step" ng-click="goPage()">Entrar</button>
+        <button type="button" class="next-step" ng-disabled="!formIsValid || isLoading" ng-click="signin.request()">Entrar</button>
     </ion-footer-bar>
 </ion-view>

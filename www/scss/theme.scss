@@ -675,7 +675,16 @@ opacity:0.5 $im;
     .no-border {
         border: none $im;
     }
-    .alert-info {
+
+
+    .has-nav {
+        bottom: 64px $im;
+    }
+}
+.has-footer{
+    bottom: 70px;
+}
+.alert-info {
         min-height: 64px;
         border-radius: 6px;
         background-color: #592b5f;
@@ -688,16 +697,10 @@ opacity:0.5 $im;
         span {
             display: block;
         }
+  &.log-error{
+    background-color: #f63371 $im;
+  }
     }
-
-    .has-nav {
-        bottom: 64px $im;
-    }
-}
-.has-footer{
-    bottom: 70px;
-}
-
 /*LIST
 -------------------------------------------------- */
 

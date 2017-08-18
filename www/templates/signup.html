@@ -21,7 +21,7 @@
                    <span class="input-label">E-mail</span>
                    <span class="label-error" ng-if="emailValidate">Digite um email válido</span>
                    <span class="label-error" ng-if="signup.error.emailExsists">Email em uso</span>
-                   <input type="text"  placeholder="E-mail" ng-model="data.email" required="true" ng-click="emailValidate=false" validate-email/>
+                   <input type="email"  placeholder="E-mail" ng-model="data.email" required="true" ng-click="emailValidate=false" validate-email/>
                </label>
                     <span class="label-error password-compare" ng-class="{errorInput:form.confirmPassword.$invalid && form.confirmPassword.$dirty}"  ng-if="form.confirmPassword.$invalid && form.confirmPassword.$dirty">
                      As senhas não correspondem.
@@ -105,7 +105,7 @@
                     </label>
                     <label class=" item-input item-floating-label">
                     <span class="input-label">CEP</span>
-                    <input type="text"  placeholder="CEP" ng-model="data.cep" required="true"/>
+                    <input type="number"  placeholder="CEP" ng-model="data.cep" required="true"/>
                     </label>
                     <label class=" item-input item-floating-label">
                     <span class="input-label">Endereço</span>
