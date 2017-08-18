@@ -6,10 +6,20 @@ $im: !important;
 body {
     font-weight: 400;
 }
-
+.keyboard-open{
+  .has-footer{
+    bottom:0 $im;
+  }
+}
 /* Loading
 -------------------------------------------------- */
-
+.item-divider{
+  margin: 0 $im;
+  background-color: #fbfbfb $im;
+  border-left: 0 $im;
+  border-right: 0 $im;
+  
+}
 .loading-bar {
     width: 100%;
     background-color: #F0F0F0;
@@ -743,6 +753,9 @@ opacity:0.5 $im;
 
 /*CALENDAR CLASS
 -------------------------------------------------- */
+[tiny-calendar]{
+  padding-bottom: 60px $im;
+}
 .fake-footer{
     height: 96px $im;
 }

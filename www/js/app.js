@@ -64,8 +64,33 @@ var app = angular.module('cudadosoApp', ['ionic', 'ngCordova', 'angular-tiny-cal
 })
 .constant('BASE_URL', 'http://appockserver14.cloudapp.net/api.appock.co/api_cuidadoso_v1/public/v1/app')
 .constant('GOOGLE_KEY', 'AIzaSyBcdola8PQIYUmuZ2EPpbs1KpoK_hxN9f4')
-.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
+.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider, $httpProvider, $compileProvider) {
     moment.locale('pt-BR');
+    $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|file|javascript):/);
+    $ionicConfigProvider.backButton.previousTitleText(false);
+    $ionicConfigProvider.backButton.text('');
+    $httpProvider.interceptors.push( function($rootScope, $q, $cordovaToast) {
+            return {
+                request: function(config) {
+                    config.timeout = 5000;
+                    return config;
+                },
+                responseError: function(rejection) {
+                    switch (rejection.status) {
+                        case 401:
+                            $rootScope.goToPage('login');
+                            $cordovaToast.show('Faça login para continuar', 'short', 'bottom').then(function(success) {}, function(error) {
+                                alert('Faça login para continuar');
+                            });
+                            break;
+                        case 408:
+                            console.log('connection timed out 1212');
+                            break;
+                    }
+                    return $q.reject(rejection);
+                }
+            }
+        });
     $stateProvider
 
     // setup an abstract state for the tabs directive
@@ -163,4 +188,11 @@ var app = angular.module('cudadosoApp', ['ionic', 'ngCordova', 'angular-tiny-cal
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/onboarding');
 
-});
+}).factory('timeoutHttpIntercept', function($rootScope, $q) {
+        return {
+            'request': function(config) {
+                config.timeout = 5000;
+                return config;
+            }
+        };
+    });
